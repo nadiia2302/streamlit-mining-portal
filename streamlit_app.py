@@ -119,10 +119,7 @@ def generate_pdf():
     pdf.cell(200, 10, txt=f"Metric Analyzed: {selected_col}", ln=True)
     pdf.cell(200, 10, txt=f"Mean: {mean_val:.2f} | Median: {median_val:.2f}", ln=True)
     pdf.cell(200, 10, txt=f"Std Dev: {std_val:.2f} | IQR: {iqr_val:.2f}", ln=True)
-    
-    # Save graph as image
-    fig.write_image("temp_plot.png")
-    pdf.image("temp_plot.png", x=10, y=70, w=180)
+
     
     return pdf.output(dest='S').encode('latin-1')
 
