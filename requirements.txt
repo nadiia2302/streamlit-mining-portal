@@ -1,0 +1,8 @@
+streamlit
+streamlit-gsheets
+pandas
+numpy
+plotly
+scipy
+fpdf
+kaleido
