@@ -1,9 +1,9 @@
 streamlit
-gspread
-oauth2client
 pandas
 numpy
 plotly
 scipy
 fpdf
 kaleido
+gspread
+oauth2client
