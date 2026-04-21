@@ -7,3 +7,4 @@ fpdf
 kaleido
 gspread
 oauth2client
+streamlit_gsheets
