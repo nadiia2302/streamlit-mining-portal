@@ -112,14 +112,21 @@ st.plotly_chart(fig, use_container_width=True)
 def generate_pdf():
     pdf = FPDF()
     pdf.add_page()
+
     pdf.set_font("Arial", 'B', 16)
     pdf.cell(200, 10, txt=f"Weyland-Yutani Report: {selected_mine}", ln=True, align='C')
+
     pdf.set_font("Arial", size=12)
     pdf.ln(10)
+
     pdf.cell(200, 10, txt=f"Metric Analyzed: {selected_col}", ln=True)
     pdf.cell(200, 10, txt=f"Mean: {mean_val:.2f} | Median: {median_val:.2f}", ln=True)
     pdf.cell(200, 10, txt=f"Std Dev: {std_val:.2f} | IQR: {iqr_val:.2f}", ln=True)
 
+    pdf.ln(5)
+    pdf.cell(200, 10, txt="Note: Chart is available in the Streamlit dashboard.", ln=True)
+
+    return pdf.output(dest='S').encode('latin-1')
     
     return pdf.output(dest='S').encode('latin-1')
 
